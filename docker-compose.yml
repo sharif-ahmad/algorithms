@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+
+  algo:
+    build: .
+    environment:
+      - DISPLAY
+    working_dir: /src/algo
+    volumes:
+      - ".:/src/algo"
+      - "/tmp/.X11-unix:/tmp/.X11-unix:rw"
